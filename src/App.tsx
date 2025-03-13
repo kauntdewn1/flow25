@@ -58,10 +58,10 @@ const SiteHitech2025 = () => {
 
   return (
     <div className="bg-black text-white min-h-screen">
-      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80' : 'bg-transparent'} backdrop-blur-lg border-b border-white/5`}>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80' : 'bg-black'} backdrop-blur-lg border-b border-white/5`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <motion.div 
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             className="relative"
           >
@@ -199,7 +199,7 @@ const SiteHitech2025 = () => {
             WE.ARE.FLOW
           </motion.h2>
           <motion.div 
-            className="text-lg text-white/70 text-center leading-relaxed"
+            className="text-lg text-white/70 text-center leading-relaxed space-y-2"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -257,7 +257,7 @@ const SiteHitech2025 = () => {
 
       <motion.section 
         id="equipe" 
-        className="py-20 bg-gradient-to-b from-black to-gray-900"
+        className="py-20 bg-gradient-to-b from-black"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -275,29 +275,31 @@ const SiteHitech2025 = () => {
             {teamMembers.map((member, index) => (
               <motion.div 
                 key={index}
-                className="team-card bg-gray-800/50 rounded-xl p-6 text-center border border-white/10"
+                className="team-card text-center"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
                 <motion.div 
-                  className="mb-4 relative group"
+                  className="mb-4 bg-transparent relative"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-32 h-32 mx-auto object-cover rounded-full"
-                  />
-                  <div 
-                    className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
+                    className="w-64 h-64 mx-auto object-contain bg-transparent"
+                    style={{
+                      filter: 'drop-shadow(0 4px 12px rgba(255, 4, 119, 0.6))'
+                    }}
                   />
                 </motion.div>
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-[#ff0477] mb-2">{member.role}</p>
-                <p className="text-white/70">{member.desc}</p>
+                <div className="mt-6">
+                  <h3 className="text-xl font-semibold">{member.name}</h3>
+                  <p className="text-[#ff0477] mb-2">{member.role}</p>
+                  <p className="text-white/70">{member.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -306,7 +308,7 @@ const SiteHitech2025 = () => {
 
       <motion.section 
         id="web3" 
-        className="py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden"
+        className="py-20 md:py-32 bg-gradient-to-b to-white relative overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -378,7 +380,7 @@ const SiteHitech2025 = () => {
               <input 
                 type="text" 
                 placeholder="Seu WhatsApp" 
-                className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-[#ff0477] transition-all"
+                className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-[#ff0477] transition-all"
               />
             </div>
             <motion.button
