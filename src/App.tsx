@@ -65,27 +65,6 @@ const SiteHitech2025 = () => {
             animate={{ opacity: 1 }}
             className="relative"
           >
-            <div className="h-16 md:h-20 flex items-center">
-              {/* Desktop Logo */}
-              <motion.img 
-                src="https://res.cloudinary.com/dgyocpguk/image/upload/v1741844410/FlowOFF_Logo.png" 
-                alt="FlowOFF Logo" 
-                className="hidden md:block h-full w-auto object-contain"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-              />
-
-              {/* Mobile Logo */}
-              <motion.img 
-                src="https://res.cloudinary.com/dgyocpguk/image/upload/v1741874385/FLOWOFF_ISOTIPO_2x_or5oyk.png" 
-                alt="FlowOFF Symbol" 
-                className="block md:hidden h-12 w-auto object-contain"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              />
-            </div>
           </motion.div>
           <nav>
             <ul className="flex gap-4 md:gap-8">
@@ -139,9 +118,9 @@ const SiteHitech2025 = () => {
             className="mb-8"
           >
             <div 
-              className="logo-container relative flex justify-center items-center mx-auto w-[280px] h-[100px] md:w-[600px] md:h-[200px]"
+              className="logo-container relative flex justify-center items-center mx-auto w-[320px] h-[120px] sm:w-[400px] sm:h-[150px] md:w-[700px] md:h-[250px] lg:w-[800px] lg:h-[300px]"
               style={{
-                backgroundImage: "url('https://res.cloudinary.com/dgyocpguk/image/upload/v1741844410/FlowOFF_Logo.png')",
+                backgroundImage: "url('https://res.cloudinary.com/dgyocpguk/image/upload/v1741878155/FlowOFF_Logo_ivgy0f_yx0jhk.png')",
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat"
@@ -151,11 +130,10 @@ const SiteHitech2025 = () => {
 
           <motion.div className="space-y-4 md:space-y-6">
             <motion.h1 
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white"
+              className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-[#ff0477]"
             >
-              <span className="block mb-2">Estratégias</span>
-              <span className="block mb-2">Inteligentes</span>
-              <span className="block font-light">para a Nova Era Digital</span>
+              <span className="mb-2 whitespace-nowrap">Estratégias Inteligentes</span>
+              <span className="block font-light text-white">para a Nova Era Digital</span>
             </motion.h1>
 
             <motion.p 
@@ -175,7 +153,7 @@ const SiteHitech2025 = () => {
             className="inline-block"
           >
             <motion.button
-              className="glow-button px-6 md:px-8 py-3 md:py-4 bg-[#ff0477] rounded-full text-white text-sm md:text-base font-semibold hover:bg-[#ff0477]/90 transition-all"
+              className="glow-button px-6 md:px-8 py-3 md:py-4 bg-[#ff0477] rounded-full text-white text-sm md:text-base font-semibold hover:bg-[#ff0477]/90 transition-all mt-8"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -213,7 +191,7 @@ const SiteHitech2025 = () => {
         </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.h2 
-            className="text-4xl font-bold text-center mb-8"
+            className="text-4xl text-[#ff0477] font-bold text-center mb-8"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
