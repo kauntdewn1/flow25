@@ -5,7 +5,7 @@ const SiteHitech2025 = () => {
     return (
         <div>
             <header className="flex justify-between items-center p-4 bg-black text-white">
-                <div className="text-xl font-bold">LOGO</div>
+                <div className="text-xl font-bold">FlowOFF</div>
                 <nav>
                     <ul className="flex gap-4">
                         <li><a href="#home">Home</a></li>
