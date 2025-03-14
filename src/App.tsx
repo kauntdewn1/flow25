@@ -40,21 +40,28 @@ const SiteHitech2025 = () => {
       name: "Netto Mello",
       role: "Fundador e Estrategista",
       desc: "Visionário, especializado em marketing e tecnologia.",
-      image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741844645/team1_k0tdq7.jpg"
+      image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741900954/01_hqizg7.png"
     },
     {
       name: "Enrique Lopes",
       role: "Designer e UI/UX",
       desc: "Criação visual e experiência do usuário.",
-      image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741844645/team2_bmbo7k.jpg"
+      image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741900954/02_ihr9oq.png"
     },
     {
       name: "Bella Cintra",
       role: "Branding e Comunicação",
       desc: "Posicionamento de marca e storytelling.",
-      image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741844645/team3_eks8an.jpg"
+      image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741900954/03_luidg6.png"
     }
   ];
+
+  const infoproduct = {
+    name: "Flow 360 - Marketing Multicanal na prática.",
+    role: "O Flow 360 não é só teoria, é um método prático validado no mercado!",
+    image: "https://res.cloudinary.com/dgyocpguk/image/upload/v1741903838/fasdjfnasja_rrvryn.jpg",
+    link: "https://nettomello.com.br/flow-360",
+  };
 
   return (
     <div className="bg-black text-white min-h-screen">
@@ -125,7 +132,7 @@ const SiteHitech2025 = () => {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat"
               }}
-            />
+            ></div>
           </motion.div>
 
           <motion.div className="space-y-4 md:space-y-6">
@@ -199,7 +206,7 @@ const SiteHitech2025 = () => {
             WE.ARE.FLOW
           </motion.h2>
           <motion.div 
-            className="text-lg text-white/70 text-center leading-relaxed space-y-2"
+            className="text-lg text-white/70 text-center leading-relaxed"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -282,7 +289,7 @@ const SiteHitech2025 = () => {
                 transition={{ delay: index * 0.1 }}
               >
                 <motion.div 
-                  className="mb-4 bg-transparent relative"
+                  className="mb-4 bg-transparent"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -307,8 +314,63 @@ const SiteHitech2025 = () => {
       </motion.section>
 
       <motion.section 
+        id="infoprodutos" 
+        className="py-20 bg-gradient-to-b from-gray-900 to-black relative"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
+          <motion.h2 
+            className="text-4xl font-bold text-center mb-12 text-[#ff0477]"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Infoprodutos
+          </motion.h2>
+          
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <motion.div 
+              className="bg-black/50 backdrop-blur-sm rounded-xl p-8 border border-[#ff0477]/20 max-w-2xl w-full"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              <img 
+                src={infoproduct.image}
+                alt={infoproduct.name}
+                className="w-full h-64 object-cover rounded-lg mb-6"
+              />
+              <h3 className="text-2xl font-bold mb-3 text-white">{infoproduct.name}</h3>
+              <p className="text-white/70 mb-6">{infoproduct.role}</p>
+              <a 
+                href={infoproduct.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full"
+              >
+                <motion.button
+                  className="glow-button w-full px-6 py-4 bg-[#ff0477] rounded-lg text-white font-semibold hover:bg-[#ff0477]/90 transition-all"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Saiba Mais
+                </motion.button>
+              </a>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      <motion.section 
         id="web3" 
-        className="py-20 md:py-32 bg-gradient-to-b to-white relative overflow-hidden"
+        className="py-20 md:py-32 bg-black relative overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -318,37 +380,26 @@ const SiteHitech2025 = () => {
           style={{ backgroundImage: "url('https://res.cloudinary.com/dgyocpguk/image/upload/v1741844967/BBB_pxyerk.png')" }}
         ></div>
 
-        <div className="max-w-5xl mx-auto px-4 md:px-6 relative z-10">
+        <div className="max-w-5xl mx-auto px-6 relative z-10">
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8 md:mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white to-[#ff0477] leading-tight"
+            className="text-5xl font-bold text-center mb-12 text-[#ff0477] glitch-effect"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
-            O Futuro é<br className="block sm:hidden" /> Descentralizado!
+            O Futuro é <span className="text-[#ff0477]">Descentralizado!</span>
           </motion.h2>
           
           <motion.div 
-            className="text-lg sm:text-xl md:text-2xl text-white text-center leading-relaxed space-y-6 md:space-y-8"
+            className="text-xl text-white text-center leading-relaxed space-y-6"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <p className="mb-6 md:mb-8">
-              A <span className="font-bold tracking-wider glitch">FlowOFF</span> acompanha a{' '}
-              <span className="font-mono backdrop-blur-sm">evolução digital</span>{' '}
-              e já está se posicionando na <span className="animate-pulse font-bold tracking-widest">Web3</span>.
-            </p>
-            <p className="mb-6 md:mb-8">
-              Exploramos novas possibilidades de{' '}
-              <span className="font-mono border-b-2 border-white/30">descentralização</span>,{' '}
-              <span className="font-mono tracking-wide">comunidades</span> e{' '}
-              <span className="font-mono font-bold tracking-wider backdrop-blur-sm">tecnologia blockchain</span>.
-            </p>
-            <p className="text-[#ff0477] font-semibold tracking-wide text-xl md:text-2xl lg:text-3xl">
-              Seja parte desta revolução digital
-            </p>
+            <p className="glow-text">A <span className="font-bold tracking-wider">FlowOFF</span> está na vanguarda da <span className="animate-pulse text-[#ff0477]">Web3</span>, explorando novas oportunidades na descentralização e blockchain.</p>
+            <p className="border-l-4 border-[#ff0477] pl-4 italic text-white/80">Comunidades autônomas, contratos inteligentes e o futuro da internet já começaram.</p>
+            <p className="text-[#ff0477] font-semibold tracking-wide text-2xl md:text-3xl">🚀 Seja parte dessa revolução digital!</p>
           </motion.div>
         </div>
       </motion.section>
@@ -375,9 +426,29 @@ const SiteHitech2025 = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              const whatsappInput = document.getElementById("whatsapp") as HTMLInputElement;
+              const whatsapp = whatsappInput.value;
+              
+              fetch("https://script.google.com/macros/s/AKfycbwOvqdN6EDwCRLguTa65tYbNZzapSDY-1xTyXgeCs59CGTDR4QqOubhpbwCgaG1SBU/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ whatsapp }),
+              })
+              .then(() => {
+                alert("Seu material foi enviado para seu WhatsApp!");
+                whatsappInput.value = '';
+              })
+              .catch((error) => {
+                console.error('Error submitting form:', error);
+                alert("Ocorreu um erro. Por favor, tente novamente.");
+              });
+            }}
           >
             <div>
               <input 
+                id="whatsapp"
                 type="text" 
                 placeholder="Seu WhatsApp" 
                 className="w-full px-4 py-3 rounded-lg bg-black border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-[#ff0477] transition-all"
